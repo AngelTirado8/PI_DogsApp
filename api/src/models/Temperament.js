@@ -8,4 +8,4 @@ name: {
 },
 });
 
-module.exports = Temperament;
+module.exports = Temperament;;;
