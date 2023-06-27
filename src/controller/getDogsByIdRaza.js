@@ -1,41 +1,35 @@
 const { Dog, Temperament } = require('../db');
-const axios = require('axios');
 
-const apiKey = 'live_OybEDSSc02Io3KVbUErQQtUImGeIWgrABdVv763Roz5wag7xyRZjhuDkiRsiI1ec';
-const Url = 'https://api.thedogapi.com/v1/breeds/';
-
-async function getDogByIdRaza(req, res) {
-  const { id } = req.params;
+async function getDogsFromDatabase(req, res) {
   try {
-    const response = await axios.get(`${Url}${id}`, {
-      headers: {
-        'x-api-key': apiKey
-      }
+    const dogs = await Dog.findAll({
+      include: {
+        model: Temperament,
+        attributes: ['name'],
+        through: {
+          attributes: [],
+        },
+      },
     });
 
-    const { name, temperament, origin, life_span, weight, height, reference_image_id } = response.data;
+    const dogData = dogs.map(dog => {
+      const { id, name, image, temperaments } = dog;
 
-    const dog = {
-      name,
-      temperament,
-      origin,
-      life_span,
-      weight,
-      height,
-      reference_image_id
-      
-    };
+      return {
+        id,
+        name,
+        image,
+        temperaments: temperaments.map(temperament => temperament.name),
+      };
+    });
 
-    res.status(200).json(dog);
+    res.status(200).json(dogData);
   } catch (error) {
-    if (error.response && error.response.status === 404) {
-      res.status(404).send('No existe la raza de perro');
-    } else {
-      console.error(error);
-      res.status(500).json({ error: 'Error al obtener el detalle de la raza de perro' });
-    }
+    console.error(error);
+    res.status(500).json({ error: 'Error al obtener los perros de la base de datos' });
   }
 }
 
-module.exports = getDogByIdRaza;
+module.exports = getDogsFromDatabase;
+
 
