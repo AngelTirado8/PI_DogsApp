@@ -13,9 +13,7 @@ async function getDogs(req, res) {
         model: Temperament,
       attributes:["name"]
         }
-  
     });
-
     // Combinar los perros de la API y de la base de datos
     const allDogs = [...apiDogs, ...dbDogs];
     console.log(allDogs)
