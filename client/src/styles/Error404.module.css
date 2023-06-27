@@ -1,0 +1,32 @@
+.error404Container {
+    padding-top: 1.5rem;
+  }
+  
+  .error404Body{
+    max-width: 600px;
+    padding: 1.75rem 2rem;
+    margin: 0 1rem;
+    background-color: var(--clr-cream);
+    border-radius: 25px;
+  }
+  
+  .error404Img{
+    margin: 1.5rem 0;
+    border-radius: 15px;
+  }
+  
+  .error404Btn{
+    background-color: var(--clr-orange);
+    border: 1px solid var(--clr-orange);
+    border-radius: 20px;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 18px;
+  }
+  .error404Btn:hover {
+    background-color: var(--clr-light-brown);
+    border: 1px solid var(--clr-light-brown);
+    color: white;
+  }
+  

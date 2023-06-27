@@ -3,22 +3,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
-const db = require('./db.js'); // Importa la carpeta models que contiene los modelos
+const {conn} = require('./db.js'); // Importa la carpeta models que contiene los modelos
 const Dog = require('./models/Dog.js'); // Importa el modelo Dog
 const Temperament = require('./models/Temperament.js'); // Importa el modelo Temperament
-
-
-
-require('./db.js');
-
-db.sync()
-  .then(() => {
-    console.log('Base de datos sincronizada');
-  })
-  .catch((error) => {
-    console.error('Error al sincronizar la base de datos:', error);
-  });
-
+require('dotenv').config();
 
 const server = express();
 
@@ -38,6 +26,16 @@ server.use((req, res, next) => {
 
 server.use('/', routes);
 
+server.get('/dogs', async (req, res) => {
+  try {
+    const dogs = await Dog.findAll(); // Recupera todos los perros de la tabla "dogs"
+    res.json(dogs); // Envía la respuesta con los perros encontrados
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error al obtener los perros');
+  }
+});
+
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;
@@ -47,3 +45,4 @@ server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 });
 
 module.exports = server;
+

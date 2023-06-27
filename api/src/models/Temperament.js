@@ -1,11 +1,18 @@
-const { DataTypes } = require('sequelize');// importo el modeloDataTypes
-const db = require('../db'); //aca importo los archivos de configuracion
+const { DataTypes } = require('sequelize');
 
-const Temperament = db.define('Temperament', { //defino el modelo usando el define
-name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-},
-});
+module.exports = (sequelize) => {
+  const Temperament = sequelize.define('Temperament', {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  }, { timestamps: false });
 
-module.exports = Temperament;;;
+  return Temperament;
+};

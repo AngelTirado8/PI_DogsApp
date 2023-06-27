@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../assets/font/bangers/Bangers.ttf') format('truetype')
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .title {
+    background: linear-gradient(135deg, #012D2A, #5A0BBA, #00BFA5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Bangers', sans-serif;
+    letter-spacing: 3px;
+    }
+    
+.button {
+    font-family: 'Bangers', sans-serif;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transform: scale(1.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media screen and (width<= 900px) {
+    .title {
+    font-size: 24px;
+}
+  
+    .button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+}

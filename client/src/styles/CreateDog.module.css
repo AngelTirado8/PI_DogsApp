@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../assets/font/bangers/Bangers.ttf') format('truetype')
+}
+
+.formContainer {
+  padding-block: 1.5rem;
+  /* background-color: red; */
+  font-family: 'Bangers', sans-serif;
+  letter-spacing: 1px;
+  border: none;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Opcional: ajusta la altura para que ocupe todo el viewport */
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  /* background-color:wheat; */
+  background-image: url(https://e0.pxfuel.com/wallpapers/619/537/desktop-wallpaper-teal-and-white-dog-paw-prints-puppy-bone-and-hearts-tile-pattern-paw-print-background-dog-paw-print-paw-print.jpg);
+  border-radius: 25px;
+  margin: 0 1rem;
+  min-width: 290px;
+  max-width: 450px;
+  text-align: left;
+  padding: 1.75rem 1.5rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: large;
+}
+
+  
+  
+  .backBtn {
+    margin-bottom: 15px;
+    align-self: flex-start;
+    padding: .45rem;
+    /* border: none; */
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--clr-orange);
+    transition: 0.1s linear;
+    font-family: 'Bangers', sans-serif;
+  }
+  .backBtn:hover {
+    transform: scale(1.1);
+  }
+  
+  .obligatory {
+    color: var(--clr-orange);
+    font-weight: 700;
+  }
+  
+  .formError {
+    color: red;
+    font-size: 13px;
+  }
+  
+  .formTitle {
+    font-family: var(--ff-nunito);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: .25rem;
+  }
+  .formSubtitle {
+    font-family: var(--ff-nunito);
+    margin-bottom: .5rem;
+  }
+  
+  .formCreation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+.formLabelTitle {
+    margin-top: .5rem;
+}
+
+.formCreation input,
+.formCreation select {
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 0.25rem 1rem;
+    outline: none;
+    font-family: 'Bangers', sans-serif;
+  }
+  
+  .formDobleInputContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .formDobleInput {
+    width: 49%;
+    
+  }
+  .formDobleErrorContainer {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .formDobleError {
+    width: 48%;
+  }
+  
+  .formTemperamentsSelected {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: .25rem;
+  }
+  .formTemperamentsSelectedItem {
+    border: 1px solid var(--clr-orange);
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    padding: .25rem .75rem;
+    margin: 2px;
+  }
+  .formTemperamentsDeletebBtn {
+    background: none;
+    border: none;
+    color: var(--clr-orange);
+    padding-left: 8px;
+    cursor: pointer;
+  }
+  .formSubmitBtn {
+    margin-top: 1rem;
+    /* border: none; */
+    border-radius: 25px;
+    background-color:white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-family: 'Bangers', sans-serif;
+  }
+  .formSubmitBtn:hover {
+    transform: scale(1.1);
+
+  }
+  
+  @media (min-width: 420px) {
+    .formBody {
+      padding: 2.25rem 2rem;
+    }
+    .formTitle {
+      font-size: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    .formLabelTitle {
+      margin-top: .75rem;
+    }
+    .formCreation input,
+    .formCreation select {
+      padding: 0.5rem 1.25rem;
+    }
+  }
+  
+  @media screen and (width<= 900px) {
+    .formBody {
+      margin-inline: auto;
+    }
+  }
+  

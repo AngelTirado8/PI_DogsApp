@@ -1,0 +1,26 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  
+}
+
+.searchInput {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-family: 'Bangers', sans-serif;
+}
+
+.searchBtn {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: #e0e0e0;
+}

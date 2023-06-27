@@ -1,11 +1,11 @@
 const { DataTypes } = require('sequelize');
 
-module.exports = (sequelize) => {
-  // defino el modelo
+module.exports = (sequelize, Sequelize) => {
+  // Defino el modelo
   const Dog = sequelize.define('Dog', {
     id: {
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      defaultValue: Sequelize.UUIDV4,
       primaryKey: true,
     },
     image: {
@@ -29,7 +29,6 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
   });
-
 
   return Dog;
 };

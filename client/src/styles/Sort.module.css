@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../assets/font/bangers/Bangers.ttf') format('truetype')
+}
+
+.sortContainer select {
+    background-color: white;
+    font-family: 'Bangers', sans-serif;
+    border-radius: 20px;
+    font-size: 1em;
+    width: 185px;
+    /* border: 1px solid var(--clr-light-brown); */
+    padding: 0.25rem 0.5rem;
+    margin: 2px 0;
+}
+
+.sortTitle {
+    font-weight: 700; 
+}

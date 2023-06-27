@@ -1,0 +1,49 @@
+.card {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 270px;
+  margin: .75rem;
+  transition: 0.2s ease;
+  background-image: url(https://e0.pxfuel.com/wallpapers/619/537/desktop-wallpaper-teal-and-white-dog-paw-prints-puppy-bone-and-hearts-tile-pattern-paw-print-background-dog-paw-print-paw-print.jpg);
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente la tarjeta */
+  background-position: center; /* Centra la imagen de fondo en la tarjeta */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+  
+  .dogImg {
+    height: 210px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .cardBody {
+    /* background-color: red; */
+    padding: 1.25rem .75rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* border: 1px solid; */
+    background-size: cover;
+    justify-content: center;
+  }
+  .cardTitle {
+    /* font-weight: 700; */
+    font-size: 1.25rem;
+    /* font-family: var(--ff-nunito); */
+    letter-spacing: 3px;
+    
+  }
+  .cardWeight {
+    color:sandybrown
+    /* font-family: var(--ff-nunito); */
+  }
+  .cardTemperaments {
+    color: var(--clr-light-brown);
+  }

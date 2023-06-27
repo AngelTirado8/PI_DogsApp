@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../assets/font/bangers/Bangers.ttf') format('truetype')
+}
+
+.filterContainer select {
+    background-color: white;
+    border-radius: 20px;
+    /* border: 1px solid var(--clr-light-brown); */
+    padding: 0.25rem 0.5rem;
+    font-family: 'bangers', sans-serif;
+    font-size: 1em;
+  }
+  .filterTitle {
+    font-weight: 700;
+  }
+  

@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Bangers';
+  src: url('../assets/font/bangers/Bangers.ttf') format('truetype');
+}
+
+.detail {
+  padding: 1.5rem;
+  font-family: 'Bangers', sans-serif;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  
+}
+
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  background-image: url(https://e0.pxfuel.com/wallpapers/619/537/desktop-wallpaper-teal-and-white-dog-paw-prints-puppy-bone-and-hearts-tile-pattern-paw-print-background-dog-paw-print-paw-print.jpg);
+  border-radius: 25px;
+  max-width: 950px;
+  text-align: left;
+  padding: 1.75rem 2rem;
+  margin: 0 auto; /* Centra horizontalmente */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.detailBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+}
+
+
+.detailTitle {
+  display: inline-flex;
+  position: relative;
+  font-family: 'Bangers', sans-serif;
+  color: var(--clr-dark-brown);
+  margin: 1rem 0;
+}
+
+.backbtn {
+ margin-bottom: 15px;
+ align-self: flex-start;
+ padding: 0.45rem;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: 1s;
+ color: black;
+}
+
+.detailTitle::after {
+  content: ' ';
+  position: absolute;
+  background-color: var(--clr-light-brown);
+  height: 2px;
+  width: 60%;
+  left: 0;
+  bottom: 4px;
+  border-radius: 25px;
+}
+
+.detailImg {
+  border-radius: 20px;
+  margin: 0.75rem 0;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.detailDescription {
+  /* color: var(--clr-light-brown); */
+  backdrop-filter: blur(1px); 
+  border-radius: 10px;
+}
+
+  
+
+.detailCategory {
+  font-weight: 700;
+}
+
+.detailDogNotFoundImg {
+  align-self: center;
+  margin: 0.75rem 0;
+  width: 80%;
+  max-height: 300px;
+}
+
+.detailDogNotFoundTitle {
+  font-family: 'Bangers', sans-serif;
+  color: var(--clr-dark-brown);
+  margin: 1rem 0;
+}
+
+.detailDeleteEditBtnContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.detailDeleteEditBtn {
+  margin-top: 1rem;
+  background-color: var(--clr-light-brown);
+  border: none;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  transition: 0.1s;
+  border-radius: 20px;
+}
+
+.detailDeleteBtn {
+  background-color: var(--clr-orange);
+  color: var(--clr-dark-brown);
+}
+
+.detailDeleteBtn:hover {
+  background-color: var(--clr-light-brown);
+  color: white;
+}
+
+@media (min-width: 575px) {
+  .detailBody {
+    flex-direction: row;
+  }
+  .detailImg {
+    order: 1;
+    max-height: 450px;
+    max-width: 65%;
+    margin: 0;
+  }
+  .detailTitle {
+    order: 2;
+    margin-left: 2rem;
+  }
+  .detailDescription {
+    order: 3;
+    margin-left: 2rem;
+  }
+  .detail-dog-not-found-img {
+    max-width: 60%;
+    margin: 0;
+  }
+  .detail-dog-not-found-title {
+    margin: 1rem 0 1rem 2rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .detailTitle {
+    margin-bottom: 1rem;
+  }
+  .detailDescription {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 970px) {
+  .detailContainer {
+    margin-inline: auto;
+  }
+}

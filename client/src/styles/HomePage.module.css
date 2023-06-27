@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../assets/font/bangers/Bangers.ttf') format('truetype')
+}
+.App {
+    text-align: center;
+    
+  }
+  
+  .homeContainer {
+    margin: 20px;
+    font-family: 'Bangers', sans-serif;
+    letter-spacing: 1px;
+    justify-content: center;
+    display: grid;
+    color: aliceblue;
+    
+  }
+  
+  .sortFilterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sortFilter {
+    display: flex;
+  }
+  
+  .homeRefreshBtn {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    /* border: none; */
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'bangers', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+  }
+  
+  .createDog {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  .homeDogNotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    color: #555;
+  }
+  
+  .homeDogNotFound img {
+    margin-bottom: 20px;
+  }
+  
+  .pages {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pages button {
+    background-color: #f0f0f0;
+    border: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .pages button.active {
+    background-color: #ccc;
+  }
+
+  .pagesContainer{
+    margin-bottom: 100px;
+  }
+
+  @media screen and (width<= 900px) {
+    /* Estilos específicos para dispositivos móviles */
+  
+    .sortFilterContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 1.5rem .75rem;
+    }
+  
+    .sortFilter {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+  
+    .cardContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer {
+      display: none;
+    }
+  }

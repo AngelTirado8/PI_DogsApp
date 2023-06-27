@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(https://e0.pxfuel.com/wallpapers/619/537/desktop-wallpaper-teal-and-white-dog-paw-prints-puppy-bone-and-hearts-tile-pattern-paw-print-background-dog-paw-print-paw-print.jpg);  */
+  background-color: black;
+  
+  
+  background-attachment:fixed;
+  background-size:cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 8px;
 }
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* 
+code {
+  font-family: 
+} */
+
